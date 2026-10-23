@@ -1,0 +1,3 @@
+# fisiere excluse din incarcare
+.env
+__pycache__/

@@ -30,6 +30,7 @@ else:
         'units': 'metric',
         'lang': 'ro'
     }).json()
+    print(raspuns)
 
 starea_vremii = raspuns['weather'][0]['description']
 temperatura=raspuns['main']['temp']

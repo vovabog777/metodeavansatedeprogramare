@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My App</title>
+    <style>
+        body { font-family: sans-serif; text-align: center; margin-top: 80px; }
+        button { font-size: 20px; padding: 12px 28px; border-radius: 8px;
+                 border: none; background: #2563eb; color: white; cursor: pointer; }
+        button:hover { background: #1d4ed8; }
+        #result { margin-top: 24px; font-size: 18px; }
+    </style>
+</head>
+<body>
+    <h1>My FastAPI App</h1>
+    <button onclick="sayHello()">Click me</button>
+    <p id="result"></p>
+    <script>
+        async function sayHello() {
+            const response = await fetch("/api/hello");
+            const data = await response.json();
+            document.getElementById("result").textContent = data.message;
+        }
+    </script>
+</body>
+</html>
